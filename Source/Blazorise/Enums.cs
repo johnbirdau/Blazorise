@@ -31,7 +31,7 @@ namespace Blazorise
     /// <summary>
     /// Predefined set of contextual colors.
     /// </summary>
-    public enum Color
+    public enum Variant
     {
         /// <summary>
         /// No color will be applied to an element.
@@ -87,7 +87,7 @@ namespace Blazorise
     /// <summary>
     /// Predefined set of contextual text colors.
     /// </summary>
-    public enum TextColor
+    public enum TextVariant
     {
         /// <summary>
         /// No color will be applied to an element.

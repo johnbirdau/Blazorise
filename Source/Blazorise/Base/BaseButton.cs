@@ -12,7 +12,7 @@ namespace Blazorise.Base
     {
         #region Members
 
-        private Color color = Color.None;
+        private Variant variant = Variant.None;
 
         private ButtonSize size = ButtonSize.None;
 
@@ -34,8 +34,8 @@ namespace Blazorise.Base
         {
             ClassMapper
                 .Add( () => ClassProvider.Button() )
-                .If( () => ClassProvider.ButtonColor( Color ), () => Color != Color.None && !IsOutline )
-                .If( () => ClassProvider.ButtonOutline( Color ), () => Color != Color.None && IsOutline )
+                .If( () => ClassProvider.ButtonColor( Variant ), () => Variant != Variant.None && !IsOutline )
+                .If( () => ClassProvider.ButtonOutline( Variant ), () => Variant != Variant.None && IsOutline )
                 .If( () => ClassProvider.ButtonSize( Size ), () => Size != ButtonSize.None )
                 .If( () => ClassProvider.ButtonBlock(), () => IsBlock )
                 .If( () => ClassProvider.ButtonActive(), () => IsActive )
@@ -83,12 +83,12 @@ namespace Blazorise.Base
         /// Gets or sets the button color.
         /// </summary>
         [Parameter]
-        protected Color Color
+        protected Variant Variant
         {
-            get => color;
+            get => variant;
             set
             {
-                color = value;
+                variant = value;
 
                 ClassMapper.Dirty();
             }

@@ -12,7 +12,7 @@ namespace Blazorise.Base
     {
         #region Members
 
-        private TextColor color = TextColor.None;
+        private TextVariant variant = TextVariant.None;
 
         private TextAlignment alignment = TextAlignment.Left;
 
@@ -29,7 +29,7 @@ namespace Blazorise.Base
         protected override void RegisterClasses()
         {
             ClassMapper
-                .If( () => ClassProvider.SimpleTextColor( Color ), () => Color != TextColor.None )
+                .If( () => ClassProvider.SimpleTextColor( Variant ), () => Variant != TextVariant.None )
                 .If( () => ClassProvider.SimpleTextAlignment( Alignment ), () => Alignment != TextAlignment.None )
                 .If( () => ClassProvider.SimpleTextTransform( Transform ), () => Transform != TextTransform.None )
                 .If( () => ClassProvider.SimpleTextWeight( Weight ), () => Weight != TextWeight.None )
@@ -43,12 +43,12 @@ namespace Blazorise.Base
         #region Properties
 
         [Parameter]
-        protected TextColor Color
+        protected TextVariant Variant
         {
-            get => color;
+            get => variant;
             set
             {
-                color = value;
+                variant = value;
 
                 ClassMapper.Dirty();
             }

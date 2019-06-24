@@ -18,7 +18,7 @@ namespace Blazorise.Providers
 
         public string TextSize( Size size ) => null;
 
-        public string TextColor( Color color ) => null;
+        public string TextVariant( Variant variant ) => null;
 
         public string TextValidation( ValidationStatus validationStatus ) => null;
 
@@ -186,9 +186,9 @@ namespace Blazorise.Providers
 
         public string Button() => null;
 
-        public string ButtonColor( Color color ) => null;
+        public string ButtonColor( Variant variant ) => null;
 
-        public string ButtonOutline( Color color ) => null;
+        public string ButtonOutline( Variant variant ) => null;
 
         public string ButtonSize( ButtonSize buttonSize ) => null;
 
@@ -244,9 +244,9 @@ namespace Blazorise.Providers
 
         public string DropdownToggle() => null;
 
-        public string DropdownToggleColor( Color color ) => null;
+        public string DropdownToggleColor( Variant variant ) => null;
 
-        public string DropdownToggleOutline( Color color ) => null;
+        public string DropdownToggleOutline( Variant variant ) => null;
 
         public string DropdownToggleSize( ButtonSize buttonSize ) => null;
 
@@ -452,7 +452,7 @@ namespace Blazorise.Providers
 
         public string Alert() => null;
 
-        public string AlertColor( Color color ) => null;
+        public string AlertColor( Variant variant ) => null;
 
         public string AlertDismisable() => null;
 
@@ -528,7 +528,7 @@ namespace Blazorise.Providers
 
         #region Colors
 
-        public string BackgroundColor( Background color ) => null;
+        public string BackgroundColor( Background variant ) => null;
 
         #endregion
 
@@ -568,11 +568,11 @@ namespace Blazorise.Providers
 
         public string TableRow() => null;
 
-        public string TableRowColor( Color color ) => null;
+        public string TableRowColor( Variant variant ) => null;
 
         public string TableRowBackground( Background background ) => null;
 
-        public string TableRowTextColor( TextColor textColor ) => null;
+        public string TableRowTextColor( TextVariant textVariant ) => null;
 
         public string TableRowIsSelected() => null;
 
@@ -580,11 +580,11 @@ namespace Blazorise.Providers
 
         public string TableRowCell() => null;
 
-        public string TableRowCellColor( Color color ) => null;
+        public string TableRowCellColor( Variant variant ) => null;
 
         public virtual string TableRowCellBackground( Background background ) => null;
 
-        public virtual string TableRowCellTextColor( TextColor textColor ) => null;
+        public virtual string TableRowCellTextColor( TextVariant textVariant ) => null;
 
         #endregion
 
@@ -592,7 +592,7 @@ namespace Blazorise.Providers
 
         public string Badge() => null;
 
-        public string BadgeColor( Color color ) => null;
+        public string BadgeColor( Variant variant ) => null;
 
         public string BadgePill() => null;
 
@@ -612,7 +612,7 @@ namespace Blazorise.Providers
 
         #region SimpleText
 
-        public string SimpleTextColor( TextColor textColor ) => null;
+        public string SimpleTextColor( TextVariant textVariant ) => null;
 
         public string SimpleTextAlignment( TextAlignment textAlignment ) => null;
 
@@ -628,7 +628,7 @@ namespace Blazorise.Providers
 
         public string Heading( HeadingSize headingSize ) => null;
 
-        public string HeadingTextColor( TextColor textColor ) => null;
+        public string HeadingTextColor( TextVariant textVariant ) => null;
 
         #endregion
 
@@ -690,11 +690,11 @@ namespace Blazorise.Providers
 
         public string Breakpoint( Breakpoint breakpoint ) => null;
 
-        public string Color( Color color ) => null;
+        public string Variant( Variant variant ) => null;
 
-        public string Color( Background color ) => null;
+        public string Variant( Background background ) => null;
 
-        public string TextColor( TextColor textColor ) => null;
+        public string TextVariant( TextVariant textVariant ) => null;
 
         public string ThemeContrast( ThemeContrast themeContrast ) => null;
 

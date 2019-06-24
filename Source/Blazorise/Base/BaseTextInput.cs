@@ -17,7 +17,7 @@ namespace Blazorise.Base
     {
         #region Members
 
-        private Color color;
+        private Variant variant;
 
         #endregion
 
@@ -27,7 +27,7 @@ namespace Blazorise.Base
         {
             ClassMapper
                 .Add( () => ClassProvider.Text( IsPlaintext ) )
-                .If( () => ClassProvider.TextColor( Color ), () => Color != Color.None )
+                .If( () => ClassProvider.TextVariant( Variant ), () => Variant != Variant.None )
                 .If( () => ClassProvider.TextSize( Size ), () => Size != Size.None )
                 .If( () => ClassProvider.TextValidation( ParentValidation?.Status ?? ValidationStatus.None ), () => ParentValidation?.Status != ValidationStatus.None );
 
@@ -82,12 +82,12 @@ namespace Blazorise.Base
         /// Sets the input text color.
         /// </summary>
         [Parameter]
-        protected Color Color
+        protected Variant Variant
         {
-            get => color;
+            get => variant;
             set
             {
-                color = value;
+                variant = value;
 
                 Dirty();
                 ClassMapper.Dirty();

@@ -15,7 +15,7 @@ namespace Blazorise
 
         string TextSize( Size size );
 
-        string TextColor( Color color );
+        string TextVariant( Variant variant );
 
         string TextValidation( ValidationStatus validationStatus );
 
@@ -181,9 +181,9 @@ namespace Blazorise
 
         string Button();
 
-        string ButtonColor( Color color );
+        string ButtonColor( Variant variant );
 
-        string ButtonOutline( Color color );
+        string ButtonOutline( Variant variant );
 
         string ButtonSize( ButtonSize buttonSize );
 
@@ -239,9 +239,9 @@ namespace Blazorise
 
         string DropdownToggle();
 
-        string DropdownToggleColor( Color color );
+        string DropdownToggleColor( Variant variant );
 
-        string DropdownToggleOutline( Color color );
+        string DropdownToggleOutline( Variant variant );
 
         string DropdownToggleSize( ButtonSize buttonSize );
 
@@ -443,7 +443,7 @@ namespace Blazorise
 
         string Alert();
 
-        string AlertColor( Color color );
+        string AlertColor( Variant variant );
 
         string AlertDismisable();
 
@@ -561,11 +561,11 @@ namespace Blazorise
 
         string TableRow();
 
-        string TableRowColor( Color color );
+        string TableRowColor( Variant variant );
 
         string TableRowBackground( Background background );
 
-        string TableRowTextColor( TextColor textColor );
+        string TableRowTextColor( TextVariant textVariant );
 
         string TableRowIsSelected();
 
@@ -573,11 +573,11 @@ namespace Blazorise
 
         string TableRowCell();
 
-        string TableRowCellColor( Color color );
+        string TableRowCellColor( Variant variant );
 
         string TableRowCellBackground( Background background );
 
-        string TableRowCellTextColor( TextColor textColor );
+        string TableRowCellTextColor( TextVariant textVariant );
 
         #endregion
 
@@ -585,7 +585,7 @@ namespace Blazorise
 
         string Badge();
 
-        string BadgeColor( Color color );
+        string BadgeColor( Variant variant );
 
         string BadgePill();
 
@@ -605,7 +605,7 @@ namespace Blazorise
 
         #region SimpleText
 
-        string SimpleTextColor( TextColor textColor );
+        string SimpleTextColor( TextVariant textVariant );
 
         string SimpleTextAlignment( TextAlignment textAlignment );
 
@@ -621,7 +621,7 @@ namespace Blazorise
 
         string Heading( HeadingSize headingSize );
 
-        string HeadingTextColor( TextColor textColor );
+        string HeadingTextColor( TextVariant textVariant );
 
         #endregion
 
@@ -683,11 +683,11 @@ namespace Blazorise
 
         string Breakpoint( Breakpoint breakpoint );
 
-        string Color( Color color );
+        string Variant( Variant variant );
 
-        string Color( Background color );
+        string Variant( Background variant );
 
-        string TextColor( TextColor textColor );
+        string TextVariant( TextVariant textVariant );
 
         string ThemeContrast( ThemeContrast themeContrast );
 

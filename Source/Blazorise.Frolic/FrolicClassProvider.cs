@@ -16,7 +16,7 @@ namespace Blazorise.Frolic
 
         public virtual string TextSize( Size size ) => $"{Text( false )}-{Size( size )}";
 
-        public virtual string TextColor( Color color ) => $"text-{Color( color )}";
+        public virtual string TextVariant( Variant variant ) => $"text-{Variant( variant )}";
 
         public virtual string TextValidation( ValidationStatus validationStatus ) => ValidationStatus( validationStatus );
 
@@ -184,9 +184,9 @@ namespace Blazorise.Frolic
 
         public virtual string Button() => "e-btn";
 
-        public virtual string ButtonColor( Color color ) => Color( color );
+        public virtual string ButtonColor( Variant variant ) => Variant( variant );
 
-        public virtual string ButtonOutline( Color color ) => color != Blazorise.Color.None ? $"outlined {Color( color )}" : $"outlined";
+        public virtual string ButtonOutline( Variant variant ) => variant != Blazorise.Variant.None ? $"outlined {Variant( variant )}" : $"outlined";
 
         public virtual string ButtonSize( ButtonSize buttonSize )
         {
@@ -264,9 +264,9 @@ namespace Blazorise.Frolic
 
         public virtual string DropdownToggle() => "button dropdown";
 
-        public virtual string DropdownToggleColor( Color color ) => Color( color );
+        public virtual string DropdownToggleColor( Variant variant ) => Variant( variant );
 
-        public virtual string DropdownToggleOutline( Color color ) => color != Blazorise.Color.None ? $"outlined {Color( color )}" : $"outlined";
+        public virtual string DropdownToggleOutline( Variant variant ) => variant != Blazorise.Variant.None ? $"outlined {Variant( variant )}" : $"outlined";
 
         public virtual string DropdownToggleSize( ButtonSize buttonSize )
         {
@@ -340,7 +340,7 @@ namespace Blazorise.Frolic
 
         public virtual string CardWhiteText() => "text-white";
 
-        public virtual string CardBackground( Background background ) => Color( background );
+        public virtual string CardBackground( Background background ) => Variant( background );
 
         public virtual string CardActions() => "card-actions";
 
@@ -515,7 +515,7 @@ namespace Blazorise.Frolic
 
         public virtual string Alert() => "e-alert";
 
-        public virtual string AlertColor( Color color ) => Color( color );
+        public virtual string AlertColor( Variant variant ) => Variant( variant );
 
         public virtual string AlertDismisable() => null;
 
@@ -575,7 +575,7 @@ namespace Blazorise.Frolic
 
         public virtual string ProgressBar() => "e-progress";
 
-        public virtual string ProgressBarColor( Background background ) => Color( background );
+        public virtual string ProgressBarColor( Background background ) => Variant( background );
 
         public virtual string ProgressBarStriped() => "progress-bar-striped";
 
@@ -593,7 +593,7 @@ namespace Blazorise.Frolic
 
         #region Colors
 
-        public virtual string BackgroundColor( Background color ) => "bg-{Color( color )}";
+        public virtual string BackgroundColor( Background variant ) => "bg-{Variant( variant )}";
 
         #endregion
 
@@ -633,11 +633,11 @@ namespace Blazorise.Frolic
 
         public virtual string TableRow() => "e-row";
 
-        public virtual string TableRowColor( Color color ) => Color( color );
+        public virtual string TableRowColor( Variant variant ) => Variant( variant );
 
-        public virtual string TableRowBackground( Background background ) => Color( background );
+        public virtual string TableRowBackground( Background background ) => Variant( background );
 
-        public virtual string TableRowTextColor( TextColor textColor ) => $"text-{TextColor( textColor )}";
+        public virtual string TableRowTextColor( TextVariant textVariant ) => $"text-{TextVariant( textVariant )}";
 
         public virtual string TableRowIsSelected() => "selected";
 
@@ -645,11 +645,11 @@ namespace Blazorise.Frolic
 
         public virtual string TableRowCell() => null;
 
-        public virtual string TableRowCellColor( Color color ) => Color( color );
+        public virtual string TableRowCellColor( Variant variant ) => Variant( variant );
 
-        public virtual string TableRowCellBackground( Background background ) => Color( background );
+        public virtual string TableRowCellBackground( Background background ) => Variant( background );
 
-        public virtual string TableRowCellTextColor( TextColor textColor ) => $"text-{TextColor( textColor )}";
+        public virtual string TableRowCellTextColor( TextVariant textVariant ) => $"text-{TextVariant( textVariant )}";
 
         #endregion
 
@@ -657,7 +657,7 @@ namespace Blazorise.Frolic
 
         public virtual string Badge() => "e-tag";
 
-        public virtual string BadgeColor( Color color ) => $"{Badge()} {Color( color )}";
+        public virtual string BadgeColor( Variant variant ) => $"{Badge()} {Variant( variant )}";
 
         public virtual string BadgePill() => $"{Badge()} rounded";
 
@@ -677,7 +677,7 @@ namespace Blazorise.Frolic
 
         #region SimpleText
 
-        public virtual string SimpleTextColor( TextColor textColor ) => $"text-{TextColor( textColor )}";
+        public virtual string SimpleTextColor( TextVariant textVariant ) => $"text-{TextVariant( textVariant )}";
 
         public virtual string SimpleTextAlignment( TextAlignment textAlignment ) => $"text-{TextAlignment( textAlignment )}";
 
@@ -693,7 +693,7 @@ namespace Blazorise.Frolic
 
         public virtual string Heading( HeadingSize headingSize ) => null;
 
-        public virtual string HeadingTextColor( TextColor textColor ) => $"text-{TextColor( textColor )}";
+        public virtual string HeadingTextColor( TextVariant textVariant ) => $"text-{TextVariant( textVariant )}";
 
         #endregion
 
@@ -794,36 +794,36 @@ namespace Blazorise.Frolic
             }
         }
 
-        public virtual string Color( Color color )
+        public virtual string Variant( Variant variant )
         {
-            switch ( color )
+            switch ( variant )
             {
-                case Blazorise.Color.Primary:
+                case Blazorise.Variant.Primary:
                     return "primary";
-                case Blazorise.Color.Secondary:
+                case Blazorise.Variant.Secondary:
                     return "gray";
-                case Blazorise.Color.Success:
+                case Blazorise.Variant.Success:
                     return "success";
-                case Blazorise.Color.Danger:
+                case Blazorise.Variant.Danger:
                     return "danger";
-                case Blazorise.Color.Warning:
+                case Blazorise.Variant.Warning:
                     return "warning";
-                case Blazorise.Color.Info:
+                case Blazorise.Variant.Info:
                     return "sky";
-                case Blazorise.Color.Light:
+                case Blazorise.Variant.Light:
                     return "light";
-                case Blazorise.Color.Dark:
+                case Blazorise.Variant.Dark:
                     return "dark";
-                case Blazorise.Color.Link:
+                case Blazorise.Variant.Link:
                     return "link";
                 default:
                     return null;
             }
         }
 
-        public virtual string Color( Background color )
+        public virtual string Variant( Background variant )
         {
-            switch ( color )
+            switch ( variant )
             {
                 case Blazorise.Background.Primary:
                     return "primary";
@@ -850,35 +850,35 @@ namespace Blazorise.Frolic
             }
         }
 
-        public virtual string TextColor( TextColor textColor )
+        public virtual string TextVariant( TextVariant textVariant )
         {
-            switch ( textColor )
+            switch ( textVariant )
             {
-                case Blazorise.TextColor.Primary:
+                case Blazorise.TextVariant.Primary:
                     return "primary";
-                case Blazorise.TextColor.Secondary:
+                case Blazorise.TextVariant.Secondary:
                     return "secondary";
-                case Blazorise.TextColor.Success:
+                case Blazorise.TextVariant.Success:
                     return "success";
-                case Blazorise.TextColor.Danger:
+                case Blazorise.TextVariant.Danger:
                     return "danger";
-                case Blazorise.TextColor.Warning:
+                case Blazorise.TextVariant.Warning:
                     return "warning";
-                case Blazorise.TextColor.Info:
+                case Blazorise.TextVariant.Info:
                     return "info";
-                case Blazorise.TextColor.Light:
+                case Blazorise.TextVariant.Light:
                     return "light";
-                case Blazorise.TextColor.Dark:
+                case Blazorise.TextVariant.Dark:
                     return "dark";
-                case Blazorise.TextColor.Body:
+                case Blazorise.TextVariant.Body:
                     return "body";
-                case Blazorise.TextColor.Muted:
+                case Blazorise.TextVariant.Muted:
                     return "muted";
-                case Blazorise.TextColor.White:
+                case Blazorise.TextVariant.White:
                     return "white";
-                case Blazorise.TextColor.Black50:
+                case Blazorise.TextVariant.Black50:
                     return "black-50";
-                case Blazorise.TextColor.White50:
+                case Blazorise.TextVariant.White50:
                     return "white-50";
                 default:
                     return null;

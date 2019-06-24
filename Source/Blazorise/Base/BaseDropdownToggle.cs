@@ -37,8 +37,8 @@ namespace Blazorise.Base
         {
             ClassMapper
                 .Add( () => ClassProvider.DropdownToggle() )
-                .If( () => ClassProvider.DropdownToggleColor( Color ), () => Color != Color.None && !IsOutline )
-                .If( () => ClassProvider.DropdownToggleOutline( Color ), () => Color != Color.None && IsOutline )
+                .If( () => ClassProvider.DropdownToggleColor( Variant ), () => Variant != Variant.None && !IsOutline )
+                .If( () => ClassProvider.DropdownToggleOutline( Variant ), () => Variant != Variant.None && IsOutline )
                 .If( () => ClassProvider.DropdownToggleSize( Size ), () => Size != ButtonSize.None )
                 .If( () => ClassProvider.DropdownToggleSplit(), () => IsSplit );
 
@@ -77,7 +77,7 @@ namespace Blazorise.Base
         /// <summary>
         /// Gets or sets the dropdown color.
         /// </summary>
-        [Parameter] protected Color Color { get; set; } = Color.None;
+        [Parameter] protected Variant Variant { get; set; } = Variant.None;
 
         /// <summary>
         /// Gets or sets the dropdown size.

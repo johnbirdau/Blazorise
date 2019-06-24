@@ -26,7 +26,7 @@ namespace Blazorise.Components.Base
 
         #region Properties
 
-        [Parameter] protected Color Color { get; set; }
+        [Parameter] protected Variant Variant { get; set; }
 
         [Parameter] protected IEnumerable<TItem> Data { get; set; }
 

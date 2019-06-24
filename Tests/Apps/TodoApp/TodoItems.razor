@@ -20,7 +20,7 @@
                                 </Validations>
                             </Addon>
                             <Addon AddonType="AddonType.End">
-                                <SimpleButton Color="Color.Primary" Clicked="@OnAddTodo">
+                                <SimpleButton Variant="Variant.Primary" Clicked="@OnAddTodo">
                                     <Icon Name="IconName.New" />Add
                                 </SimpleButton>
                             </Addon>
@@ -40,13 +40,13 @@
                 <Field IsHorizontal="true">
                     <FieldBody ColumnSize="ColumnSize.Is10">
                         <Buttons Role="ButtonsRole.Addons">
-                            <SimpleButton Color="Color.Info" Clicked="@(() => SetFilter( Filter.All ))" IsActive="@(filter == Filter.All)">All</SimpleButton>
-                            <SimpleButton Color="Color.Info" Clicked="@(() => SetFilter( Filter.Active ))" IsActive="@(filter == Filter.Active)">Active</SimpleButton>
-                            <SimpleButton Color="Color.Info" Clicked="@(() => SetFilter( Filter.Completed ))" IsActive="@(filter == Filter.Completed)">Completed</SimpleButton>
+                            <SimpleButton Variant="Variant.Info" Clicked="@(() => SetFilter( Filter.All ))" IsActive="@(filter == Filter.All)">All</SimpleButton>
+                            <SimpleButton Variant="Variant.Info" Clicked="@(() => SetFilter( Filter.Active ))" IsActive="@(filter == Filter.Active)">Active</SimpleButton>
+                            <SimpleButton Variant="Variant.Info" Clicked="@(() => SetFilter( Filter.Completed ))" IsActive="@(filter == Filter.Completed)">Completed</SimpleButton>
                         </Buttons>
                     </FieldBody>
                     <FieldBody ColumnSize="ColumnSize.Is2">
-                        <SimpleButton Color="Color.Warning" Float="Float.Right" Clicked="@OnClearCompleted" Visibility="@(todos.Any(x=>x.Completed) ? Visibility.Always : Visibility.Never)">Clear Completed</SimpleButton>
+                        <SimpleButton Variant="Variant.Warning" Float="Float.Right" Clicked="@OnClearCompleted" Visibility="@(todos.Any(x=>x.Completed) ? Visibility.Always : Visibility.Never)">Clear Completed</SimpleButton>
                     </FieldBody>
                 </Field>
             </CardFooter>

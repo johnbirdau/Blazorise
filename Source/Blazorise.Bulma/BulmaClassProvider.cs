@@ -16,7 +16,7 @@ namespace Blazorise.Bulma
 
         public virtual string TextSize( Size size ) => Size( size );
 
-        public virtual string TextColor( Color color ) => $"is-{Color( color )}";
+        public virtual string TextVariant( Variant variant ) => $"is-{Variant( variant )}";
 
         public virtual string TextValidation( ValidationStatus validationStatus ) => ValidationStatus( validationStatus );
 
@@ -196,9 +196,9 @@ namespace Blazorise.Bulma
 
         public virtual string Button() => "button";
 
-        public virtual string ButtonColor( Color color ) => $"is-{Color( color )}";
+        public virtual string ButtonColor( Variant variant ) => $"is-{Variant( variant )}";
 
-        public virtual string ButtonOutline( Color color ) => $"is-{Color( color )} is-outlined";
+        public virtual string ButtonOutline( Variant variant ) => $"is-{Variant( variant )} is-outlined";
 
         public virtual string ButtonSize( ButtonSize buttonSize )
         {
@@ -276,9 +276,9 @@ namespace Blazorise.Bulma
 
         public virtual string DropdownToggle() => "button dropdown-trigger";
 
-        public virtual string DropdownToggleColor( Color color ) => $"is-{Color( color )}";
+        public virtual string DropdownToggleColor( Variant variant ) => $"is-{Variant( variant )}";
 
-        public virtual string DropdownToggleOutline( Color color ) => $"is-{Color( color )} is-outlined";
+        public virtual string DropdownToggleOutline( Variant variant ) => $"is-{Variant( variant )} is-outlined";
 
         public virtual string DropdownToggleSize( ButtonSize buttonSize )
         {
@@ -542,7 +542,7 @@ namespace Blazorise.Bulma
 
         public virtual string Alert() => "notification";
 
-        public virtual string AlertColor( Color color ) => $"is-{Color( color )}";
+        public virtual string AlertColor( Variant variant ) => $"is-{Variant( variant )}";
 
         public virtual string AlertDismisable() => null;
 
@@ -620,7 +620,7 @@ namespace Blazorise.Bulma
 
         #region Colors
 
-        public virtual string BackgroundColor( Background color ) => $"{Color( color )}";
+        public virtual string BackgroundColor( Background variant ) => $"{Variant( variant )}";
 
         #endregion
 
@@ -660,11 +660,11 @@ namespace Blazorise.Bulma
 
         public virtual string TableRow() => null;
 
-        public virtual string TableRowColor( Color color ) => $"has-background-{Color( color )}";
+        public virtual string TableRowColor( Variant variant ) => $"has-background-{Variant( variant )}";
 
         public virtual string TableRowBackground( Background background ) => BackgroundColor( background );
 
-        public virtual string TableRowTextColor( TextColor textColor ) => $"has-text-{TextColor( textColor )}";
+        public virtual string TableRowTextColor( TextVariant textVariant ) => $"has-text-{TextVariant( textVariant )}";
 
         public virtual string TableRowIsSelected() => "is-selected";
 
@@ -672,11 +672,11 @@ namespace Blazorise.Bulma
 
         public virtual string TableRowCell() => null;
 
-        public virtual string TableRowCellColor( Color color ) => $"has-background-{Color( color )}";
+        public virtual string TableRowCellColor( Variant variant ) => $"has-background-{Variant( variant )}";
 
         public virtual string TableRowCellBackground( Background background ) => BackgroundColor( background );
 
-        public virtual string TableRowCellTextColor( TextColor textColor ) => $"has-text-{TextColor( textColor )}";
+        public virtual string TableRowCellTextColor( TextVariant textVariant ) => $"has-text-{TextVariant( textVariant )}";
 
         #endregion
 
@@ -684,23 +684,23 @@ namespace Blazorise.Bulma
 
         public virtual string Badge() => "tag";
 
-        public virtual string BadgeColor( Color color )
+        public virtual string BadgeColor( Variant variant )
         {
-            switch ( color )
+            switch ( variant )
             {
-                case Blazorise.Color.Primary:
+                case Blazorise.Variant.Primary:
                     return "is-primary";
-                case Blazorise.Color.Secondary:
+                case Blazorise.Variant.Secondary:
                     return "is-info";
-                case Blazorise.Color.Success:
+                case Blazorise.Variant.Success:
                     return "is-success";
-                case Blazorise.Color.Danger:
+                case Blazorise.Variant.Danger:
                     return "is-danger";
-                case Blazorise.Color.Warning:
+                case Blazorise.Variant.Warning:
                     return "is-warning";
-                case Blazorise.Color.Info:
+                case Blazorise.Variant.Info:
                     return "is-info";
-                case Blazorise.Color.Link:
+                case Blazorise.Variant.Link:
                     return "is-link";
                 default:
                     return null;
@@ -725,7 +725,7 @@ namespace Blazorise.Bulma
 
         #region SimpleText
 
-        public virtual string SimpleTextColor( TextColor textColor ) => $"has-text-{TextColor( textColor )}";
+        public virtual string SimpleTextColor( TextVariant textVariant ) => $"has-text-{TextVariant( textVariant )}";
 
         public virtual string SimpleTextAlignment( TextAlignment textAlignment ) => $"has-text-{TextAlignment( textAlignment )}";
 
@@ -741,7 +741,7 @@ namespace Blazorise.Bulma
 
         public virtual string Heading( HeadingSize headingSize ) => $"h{HeadingSize( headingSize )}";
 
-        public virtual string HeadingTextColor( TextColor textColor ) => $"has-text-{TextColor( textColor )}";
+        public virtual string HeadingTextColor( TextVariant textVariant ) => $"has-text-{TextVariant( textVariant )}";
 
         #endregion
 
@@ -842,32 +842,32 @@ namespace Blazorise.Bulma
             }
         }
 
-        public virtual string Color( Color color )
+        public virtual string Variant( Variant variant )
         {
-            switch ( color )
+            switch ( variant )
             {
-                case Blazorise.Color.Primary:
+                case Blazorise.Variant.Primary:
                     return "primary";
-                case Blazorise.Color.Secondary:
+                case Blazorise.Variant.Secondary:
                     return "info";
-                case Blazorise.Color.Success:
+                case Blazorise.Variant.Success:
                     return "success";
-                case Blazorise.Color.Danger:
+                case Blazorise.Variant.Danger:
                     return "danger";
-                case Blazorise.Color.Warning:
+                case Blazorise.Variant.Warning:
                     return "warning";
-                case Blazorise.Color.Info:
+                case Blazorise.Variant.Info:
                     return "info";
-                case Blazorise.Color.Link:
+                case Blazorise.Variant.Link:
                     return "link";
                 default:
                     return null;
             }
         }
 
-        public virtual string Color( Background color )
+        public virtual string Variant( Background variant )
         {
-            switch ( color )
+            switch ( variant )
             {
                 case Blazorise.Background.Primary:
                     return "has-background-primary";
@@ -894,35 +894,35 @@ namespace Blazorise.Bulma
             }
         }
 
-        public virtual string TextColor( TextColor textColor )
+        public virtual string TextVariant( TextVariant textVariant )
         {
-            switch ( textColor )
+            switch ( textVariant )
             {
-                case Blazorise.TextColor.Primary:
+                case Blazorise.TextVariant.Primary:
                     return "primary";
-                //case Blazorise.TextColor.Secondary:
+                //case Blazorise.TextVariant.Secondary:
                 //    return "secondary";
-                case Blazorise.TextColor.Success:
+                case Blazorise.TextVariant.Success:
                     return "success";
-                case Blazorise.TextColor.Danger:
+                case Blazorise.TextVariant.Danger:
                     return "danger";
-                case Blazorise.TextColor.Warning:
+                case Blazorise.TextVariant.Warning:
                     return "warning";
-                case Blazorise.TextColor.Info:
+                case Blazorise.TextVariant.Info:
                     return "info";
-                case Blazorise.TextColor.Light:
+                case Blazorise.TextVariant.Light:
                     return "light";
-                case Blazorise.TextColor.Dark:
+                case Blazorise.TextVariant.Dark:
                     return "dark";
-                //case Blazorise.TextColor.Body:
+                //case Blazorise.TextVariant.Body:
                 //    return "body";
-                //case Blazorise.TextColor.Muted:
+                //case Blazorise.TextVariant.Muted:
                 //    return "muted";
-                case Blazorise.TextColor.White:
+                case Blazorise.TextVariant.White:
                     return "white";
-                //case Blazorise.TextColor.Black50:
+                //case Blazorise.TextVariant.Black50:
                 //    return "black-50";
-                //case Blazorise.TextColor.White50:
+                //case Blazorise.TextVariant.White50:
                 //    return "white-50";
                 default:
                     return null;

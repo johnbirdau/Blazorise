@@ -16,7 +16,7 @@ namespace Blazorise.Base
 
         private bool isShow;
 
-        private Color color = Color.None;
+        private Variant variant = Variant.None;
 
         #endregion
 
@@ -26,7 +26,7 @@ namespace Blazorise.Base
         {
             ClassMapper
                 .Add( () => ClassProvider.Alert() )
-                .If( () => ClassProvider.AlertColor( Color ), () => Color != Color.None )
+                .If( () => ClassProvider.AlertColor( Variant ), () => Variant != Variant.None )
                 .If( () => ClassProvider.AlertDismisable(), () => IsDismisable )
                 .If( () => ClassProvider.Fade(), () => IsDismisable )
                 .If( () => ClassProvider.Show(), () => IsDismisable && IsShow );
@@ -81,12 +81,12 @@ namespace Blazorise.Base
         }
 
         [Parameter]
-        protected Color Color
+        protected Variant Variant
         {
-            get => color;
+            get => variant;
             set
             {
-                color = value;
+                variant = value;
 
                 ClassMapper.Dirty();
             }

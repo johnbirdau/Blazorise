@@ -5,18 +5,18 @@
         <Card Margin="Margin.Is4.OnY">
             <CardHeader>
                 <CardTitle>DEFAULT BUTTONS</CardTitle>
-                <CardSubtitle>Use the color enums like <code>Color.Primary</code></CardSubtitle>
+                <CardSubtitle>Use the variant enums like <code>Variant.Primary</code></CardSubtitle>
             </CardHeader>
             <CardBody>
-                <SimpleButton Color="Color.Primary">PRIMARY</SimpleButton>
-                <SimpleButton Color="Color.Secondary">SECONDARY</SimpleButton>
-                <SimpleButton Color="Color.Success">SUCCESS</SimpleButton>
-                <SimpleButton Color="Color.Danger">DANGER</SimpleButton>
-                <SimpleButton Color="Color.Warning">WARNING</SimpleButton>
-                <SimpleButton Color="Color.Info">INFO</SimpleButton>
-                <SimpleButton Color="Color.Light">LIGHT</SimpleButton>
-                <SimpleButton Color="Color.Dark">DARK</SimpleButton>
-                <SimpleButton Color="Color.Link">LINK</SimpleButton>
+                <SimpleButton Variant="Variant.Primary">PRIMARY</SimpleButton>
+                <SimpleButton Variant="Variant.Secondary">SECONDARY</SimpleButton>
+                <SimpleButton Variant="Variant.Success">SUCCESS</SimpleButton>
+                <SimpleButton Variant="Variant.Danger">DANGER</SimpleButton>
+                <SimpleButton Variant="Variant.Warning">WARNING</SimpleButton>
+                <SimpleButton Variant="Variant.Info">INFO</SimpleButton>
+                <SimpleButton Variant="Variant.Light">LIGHT</SimpleButton>
+                <SimpleButton Variant="Variant.Dark">DARK</SimpleButton>
+                <SimpleButton Variant="Variant.Link">LINK</SimpleButton>
                 <SimpleButton>NONE</SimpleButton>
             </CardBody>
         </Card>
@@ -30,15 +30,15 @@
                 <CardSubtitle>In need of a button, but not the hefty background colors they bring? Replace the default modifier classes with the <code>IsOutline</code> ones to remove all background images and colors on any button.</CardSubtitle>
             </CardHeader>
             <CardBody>
-                <SimpleButton Color="Color.Primary" IsOutline="true">PRIMARY</SimpleButton>
-                <SimpleButton Color="Color.Secondary" IsOutline="true">SECONDARY</SimpleButton>
-                <SimpleButton Color="Color.Success" IsOutline="true">SUCCESS</SimpleButton>
-                <SimpleButton Color="Color.Danger" IsOutline="true">DANGER</SimpleButton>
-                <SimpleButton Color="Color.Warning" IsOutline="true">WARNING</SimpleButton>
-                <SimpleButton Color="Color.Info" IsOutline="true">INFO</SimpleButton>
-                <SimpleButton Color="Color.Light" IsOutline="true">LIGHT</SimpleButton>
-                <SimpleButton Color="Color.Dark" IsOutline="true">DARK</SimpleButton>
-                <SimpleButton Color="Color.Link" IsOutline="true">LINK</SimpleButton>
+                <SimpleButton Variant="Variant.Primary" IsOutline="true">PRIMARY</SimpleButton>
+                <SimpleButton Variant="Variant.Secondary" IsOutline="true">SECONDARY</SimpleButton>
+                <SimpleButton Variant="Variant.Success" IsOutline="true">SUCCESS</SimpleButton>
+                <SimpleButton Variant="Variant.Danger" IsOutline="true">DANGER</SimpleButton>
+                <SimpleButton Variant="Variant.Warning" IsOutline="true">WARNING</SimpleButton>
+                <SimpleButton Variant="Variant.Info" IsOutline="true">INFO</SimpleButton>
+                <SimpleButton Variant="Variant.Light" IsOutline="true">LIGHT</SimpleButton>
+                <SimpleButton Variant="Variant.Dark" IsOutline="true">DARK</SimpleButton>
+                <SimpleButton Variant="Variant.Link" IsOutline="true">LINK</SimpleButton>
                 <SimpleButton IsOutline="true">NONE</SimpleButton>
             </CardBody>
         </Card>
@@ -52,10 +52,10 @@
                 <CardSubtitle>Add <code>ButtonSize.Small, ButtonSize.Large</code> for additional sizes.</CardSubtitle>
             </CardHeader>
             <CardBody>
-                <SimpleButton Color="Color.Primary" Size="ButtonSize.Small">SMALL PRIMARY</SimpleButton>
-                <SimpleButton Color="Color.Secondary" Size="ButtonSize.Small">SMALL SECONDARY</SimpleButton>
-                <SimpleButton Color="Color.Primary" Size="ButtonSize.Large">LARGE PRIMARY</SimpleButton>
-                <SimpleButton Color="Color.Secondary" Size="ButtonSize.Large">LARGE SECONDARY</SimpleButton>
+                <SimpleButton Variant="Variant.Primary" Size="ButtonSize.Small">SMALL PRIMARY</SimpleButton>
+                <SimpleButton Variant="Variant.Secondary" Size="ButtonSize.Small">SMALL SECONDARY</SimpleButton>
+                <SimpleButton Variant="Variant.Primary" Size="ButtonSize.Large">LARGE PRIMARY</SimpleButton>
+                <SimpleButton Variant="Variant.Secondary" Size="ButtonSize.Large">LARGE SECONDARY</SimpleButton>
             </CardBody>
         </Card>
     </Column>
@@ -68,8 +68,8 @@
                 <CardSubtitle>Create block level buttons by adding <code>IsBlock="true"</code></CardSubtitle>
             </CardHeader>
             <CardBody>
-                <SimpleButton Color="Color.Primary" IsBlock="true">BLOCK PRIMARY</SimpleButton>
-                <SimpleButton Color="Color.Secondary" IsBlock="true">BLOCK SECONDARY</SimpleButton>
+                <SimpleButton Variant="Variant.Primary" IsBlock="true">BLOCK PRIMARY</SimpleButton>
+                <SimpleButton Variant="Variant.Secondary" IsBlock="true">BLOCK SECONDARY</SimpleButton>
             </CardBody>
         </Card>
     </Column>
@@ -82,8 +82,8 @@
                 <CardSubtitle>Add the <code>IsActive</code> attribute to buttons.</CardSubtitle>
             </CardHeader>
             <CardBody>
-                <SimpleButton Color="Color.Primary" IsActive="true">PRIMARY</SimpleButton>
-                <SimpleButton Color="Color.Link" IsActive="true">LINK</SimpleButton>
+                <SimpleButton Variant="Variant.Primary" IsActive="true">PRIMARY</SimpleButton>
+                <SimpleButton Variant="Variant.Link" IsActive="true">LINK</SimpleButton>
             </CardBody>
         </Card>
     </Column>
@@ -94,8 +94,8 @@
                 <CardSubtitle>Add the <code>IsDisabled</code> attribute to buttons.</CardSubtitle>
             </CardHeader>
             <CardBody>
-                <SimpleButton Color="Color.Primary" IsDisabled="true">PRIMARY</SimpleButton>
-                <SimpleButton Color="Color.Link" IsDisabled="true">LINK</SimpleButton>
+                <SimpleButton Variant="Variant.Primary" IsDisabled="true">PRIMARY</SimpleButton>
+                <SimpleButton Variant="Variant.Link" IsDisabled="true">LINK</SimpleButton>
             </CardBody>
         </Card>
     </Column>
@@ -108,15 +108,15 @@
                 <CardSubtitle>Use <code>IsLoading</code> attribute to add spinners within buttons to indicate an action is currently processing or taking place.</CardSubtitle>
             </CardHeader>
             <CardBody>
-                <SimpleButton Color="Color.Primary" IsLoading="true">PRIMARY</SimpleButton>
-                <SimpleButton Color="Color.Secondary" IsLoading="true">SECONDARY</SimpleButton>
-                <SimpleButton Color="Color.Success" IsLoading="true">SUCCESS</SimpleButton>
-                <SimpleButton Color="Color.Danger" IsLoading="true">DANGER</SimpleButton>
-                <SimpleButton Color="Color.Warning" IsLoading="true">WARNING</SimpleButton>
-                <SimpleButton Color="Color.Info" IsLoading="true">INFO</SimpleButton>
-                <SimpleButton Color="Color.Light" IsLoading="true">LIGHT</SimpleButton>
-                <SimpleButton Color="Color.Dark" IsLoading="true">DARK</SimpleButton>
-                <SimpleButton Color="Color.Link" IsLoading="true">LINK</SimpleButton>
+                <SimpleButton Variant="Variant.Primary" IsLoading="true">PRIMARY</SimpleButton>
+                <SimpleButton Variant="Variant.Secondary" IsLoading="true">SECONDARY</SimpleButton>
+                <SimpleButton Variant="Variant.Success" IsLoading="true">SUCCESS</SimpleButton>
+                <SimpleButton Variant="Variant.Danger" IsLoading="true">DANGER</SimpleButton>
+                <SimpleButton Variant="Variant.Warning" IsLoading="true">WARNING</SimpleButton>
+                <SimpleButton Variant="Variant.Info" IsLoading="true">INFO</SimpleButton>
+                <SimpleButton Variant="Variant.Light" IsLoading="true">LIGHT</SimpleButton>
+                <SimpleButton Variant="Variant.Dark" IsLoading="true">DARK</SimpleButton>
+                <SimpleButton Variant="Variant.Link" IsLoading="true">LINK</SimpleButton>
             </CardBody>
         </Card>
     </Column>
@@ -130,9 +130,9 @@
             </CardHeader>
             <CardBody>
                 <Buttons>
-                    <SimpleButton Color="Color.Secondary">LEFT</SimpleButton>
-                    <SimpleButton Color="Color.Secondary">CENTER</SimpleButton>
-                    <SimpleButton Color="Color.Secondary">RIGHT</SimpleButton>
+                    <SimpleButton Variant="Variant.Secondary">LEFT</SimpleButton>
+                    <SimpleButton Variant="Variant.Secondary">CENTER</SimpleButton>
+                    <SimpleButton Variant="Variant.Secondary">RIGHT</SimpleButton>
                 </Buttons>
             </CardBody>
         </Card>
@@ -145,10 +145,10 @@
             </CardHeader>
             <CardBody>
                 <Buttons>
-                    <SimpleButton Color="Color.Secondary">LEFT</SimpleButton>
-                    <SimpleButton Color="Color.Secondary">CENTER</SimpleButton>
+                    <SimpleButton Variant="Variant.Secondary">LEFT</SimpleButton>
+                    <SimpleButton Variant="Variant.Secondary">CENTER</SimpleButton>
                     <Dropdown>
-                        <DropdownToggle Color="Color.Secondary">Dropdown</DropdownToggle>
+                        <DropdownToggle Variant="Variant.Secondary">Dropdown</DropdownToggle>
                         <DropdownMenu>
                             <DropdownItem>Item 1</DropdownItem>
                             <DropdownItem>Item 2</DropdownItem>
@@ -168,16 +168,16 @@
             <CardBody>
                 <Buttons Role="ButtonsRole.Toolbar">
                     <Buttons Margin="Margin.Is2.FromRight">
-                        <SimpleButton Color="Color.Primary">Primary</SimpleButton>
-                        <SimpleButton Color="Color.Secondary">Secondary</SimpleButton>
-                        <SimpleButton Color="Color.Info">Info</SimpleButton>
+                        <SimpleButton Variant="Variant.Primary">Primary</SimpleButton>
+                        <SimpleButton Variant="Variant.Secondary">Secondary</SimpleButton>
+                        <SimpleButton Variant="Variant.Info">Info</SimpleButton>
                     </Buttons>
                     <Buttons>
-                        <SimpleButton Color="Color.Danger">Danger</SimpleButton>
-                        <SimpleButton Color="Color.Warning">Warning</SimpleButton>
+                        <SimpleButton Variant="Variant.Danger">Danger</SimpleButton>
+                        <SimpleButton Variant="Variant.Warning">Warning</SimpleButton>
                     </Buttons>
                     <Buttons Margin="Margin.Is2.OnX">
-                        <SimpleButton Color="Color.Light">Light</SimpleButton>
+                        <SimpleButton Variant="Variant.Light">Light</SimpleButton>
                     </Buttons>
                 </Buttons>
             </CardBody>
@@ -193,7 +193,7 @@
             </CardHeader>
             <CardBody>
                 <Dropdown>
-                    <DropdownToggle Color="Color.Primary">
+                    <DropdownToggle Variant="Variant.Primary">
                         DROPDOWN
                     </DropdownToggle>
                     <DropdownMenu>
@@ -203,8 +203,8 @@
                     </DropdownMenu>
                 </Dropdown>
                 <Dropdown>
-                    <SimpleButton Color="Color.Secondary">SPLIT DROPDOWN</SimpleButton>
-                    <DropdownToggle Color="Color.Secondary" IsSplit="true"></DropdownToggle>
+                    <SimpleButton Variant="Variant.Secondary">SPLIT DROPDOWN</SimpleButton>
+                    <DropdownToggle Variant="Variant.Secondary" IsSplit="true"></DropdownToggle>
                     <DropdownMenu>
                         <DropdownItem>Action</DropdownItem>
                         <DropdownDivider />

@@ -13,11 +13,11 @@ namespace Blazorise.Base
     {
         #region Members
 
-        private Color color = Color.None;
+        private Variant variant = Variant.None;
 
         private Background background = Background.None;
 
-        private TextColor textColor = TextColor.None;
+        private TextVariant textVariant = TextVariant.None;
 
         #endregion
 
@@ -27,9 +27,9 @@ namespace Blazorise.Base
         {
             ClassMapper
                 .Add( () => ClassProvider.TableRowCell() )
-                .If( () => ClassProvider.TableRowCellColor( Color ), () => Color != Color.None )
+                .If( () => ClassProvider.TableRowCellColor( Variant ), () => Variant != Variant.None )
                 .If( () => ClassProvider.TableRowCellBackground( Background ), () => Background != Background.None )
-                .If( () => ClassProvider.TableRowCellTextColor( TextColor ), () => TextColor != TextColor.None );
+                .If( () => ClassProvider.TableRowCellTextColor( TextVariant ), () => TextVariant != TextVariant.None );
 
             base.RegisterClasses();
         }
@@ -44,12 +44,12 @@ namespace Blazorise.Base
         #region Properties
 
         [Parameter]
-        protected Color Color
+        protected Variant Variant
         {
-            get => color;
+            get => variant;
             set
             {
-                color = value;
+                variant = value;
 
                 ClassMapper.Dirty();
             }
@@ -68,12 +68,12 @@ namespace Blazorise.Base
         }
 
         [Parameter]
-        protected TextColor TextColor
+        protected TextVariant TextVariant
         {
-            get => textColor;
+            get => textVariant;
             set
             {
-                textColor = value;
+                textVariant = value;
 
                 ClassMapper.Dirty();
             }

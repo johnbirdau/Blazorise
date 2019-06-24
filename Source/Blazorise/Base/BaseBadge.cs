@@ -14,7 +14,7 @@ namespace Blazorise.Base
 
         private bool isPill;
 
-        private Color color = Color.None;
+        private Variant variant = Variant.None;
 
         private string link;
 
@@ -26,7 +26,7 @@ namespace Blazorise.Base
         {
             ClassMapper
                 .Add( () => ClassProvider.Badge() )
-                .If( () => ClassProvider.BadgeColor( Color ), () => Color != Color.None )
+                .If( () => ClassProvider.BadgeColor( Variant ), () => Variant != Variant.None )
                 .If( () => ClassProvider.BadgePill(), () => IsPill );
 
             base.RegisterClasses();
@@ -49,12 +49,12 @@ namespace Blazorise.Base
         }
 
         [Parameter]
-        protected Color Color
+        protected Variant Variant
         {
-            get => color;
+            get => variant;
             set
             {
-                color = value;
+                variant = value;
 
                 ClassMapper.Dirty();
             }
